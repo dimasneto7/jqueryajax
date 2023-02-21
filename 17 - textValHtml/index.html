@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .azul {
+        border: 1px solid #000;
+        width: 200px;
+        height: 200px;
+        background-color: #00f;
+      }
+      .purple {
+        border: 1px solid #000;
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="caixa" class="azul">
+      <h3>Primeira linha</h3>
+      <p>Segunda linha</p>
+    </div>
+    <button id="btnAzul">Azul</button>
+    <button id="btnPurple">Purple</button>
+    <script>
+      $("#btnAzul").click(function () {
+        $("#caixa").attr("class", "purple");
+      });
+      $("#btnPurple").click(function () {
+        $("#caixa").attr("class", "azul");
+      });
+    </script>
+  </body>
+</html>

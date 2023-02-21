@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <h3>primeira linha</h3>
+        <p>segunda linha</p>
+        <h2>terceira linha</h2>
+        <p>quarta linha</p>
+      </ul>
+    </div>
+    <script>
+      // $("h3").siblings().css({ border: "1px solid blue" });
+      // $("h2").next().css({ border: "1px solid blue" });
+      // $("h2").prev().css({ border: "1px solid blue" });
+      // $("h2").prevAll().css({ border: "1px solid blue" });
+      $("h2").prevUntil("h3").css({ border: "1px solid blue" });
+    </script>
+  </body>
+</html>

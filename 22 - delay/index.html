@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .caixa {
+        border: 1px solid #000;
+        width: 200px;
+        height: 200px;
+        background-color: #00f;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="caixa" class="caixa">
+      <h3>Primeira linha</h3>
+      <p>Segunda linha</p>
+    </div>
+    <button id="btn_aumentar">Aumentar</button>
+    <button id="btn_diminuir">Diminuir</button>
+    <button id="btn_mostrar">Ocultar / Mostrar</button>
+    <script>
+      $("#btn_aumentar").click(function () {
+        $("#caixa")
+          .delay(2000)
+          .animate({ width: "500px" })
+          .delay(2000)
+          .animate({ height: "500px" })
+          .delay(2000)
+          .animate({ width: "200px" })
+          .delay(2000)
+          .animate({ height: "200px" });
+      });
+      $("#btn_diminuir").click(function () {
+        $("#caixa")
+          .animate({ width: "500px" })
+          .animate({ height: "500px" })
+          .animate({ width: "200px" })
+          .animate({ height: "200px" });
+      });
+      $("#btn_mostrar").click(function () {});
+    </script>
+  </body>
+</html>

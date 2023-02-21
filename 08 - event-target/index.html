@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="texto1">CFB Cursos</p>
+    <br />
+    <div id="texto2">Curso de jQuery</div>
+    <br />
+    <p id="resultado"></p>
+    <script>
+      // $("#texto1").click((event) => {
+      //   $("#resultado").text("X: " + event.pageX + ", Y" + event.pageY);
+      // });
+
+      // $("#texto1").click((event) => {
+      //   $("#resultado").text(
+      //     "Objeto que foi clicado: " + event.target.nodeName
+      //   );
+      // });
+
+      // $("#texto2").click((event) => {
+      //   $("#resultado").text(
+      //     "Objeto que foi clicado: " + event.target.nodeName
+      //   );
+      // });
+
+      $(document).click((event) => {
+        $("#resultado").text("Objeto clicado: " + event.target.id);
+        if (event.target.id == "resultado") {
+          alert("Resultado clicado");
+        }
+      });
+    </script>
+  </body>
+</html>

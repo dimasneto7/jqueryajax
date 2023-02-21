@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .caixa {
+        background-color: blue;
+        border: 3px solid #000;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px;
+        width: 200px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div id="caixa1" class="caixa">Lorem Ipsum</div>
+      <div id="info" class="caixa"></div>
+    </div>
+    <script>
+      let cx = $("#caixa1");
+      $("#info").html(
+        "width: " +
+          cx.width() +
+          " <br> height: " +
+          cx.height() +
+          "<br> innerWidth: " +
+          cx.innerWidth() +
+          "<br> innerHeight: " +
+          cx.innerHeight() +
+          "<br> outerWidth: " +
+          cx.outerWidth() +
+          "<br> outerHeight: " +
+          cx.outerHeight() +
+          "<br> outerWidth(true): " +
+          cx.outerWidth(true) +
+          "<br> outerHeight(true): " +
+          cx.outerHeight(true)
+      );
+    </script>
+  </body>
+</html>

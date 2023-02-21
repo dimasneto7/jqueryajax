@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      .pacote {
+        background-color: #00f;
+        border: 2px solid #000;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <button id="btn_pacote">Empacotar / Desempacotar</button>
+      <button id="btn_empacotar_tudo">Empacotar Tudo</button>
+      <button id="btn_empacotar_depois">Empacotar Depois</button>
+    </div>
+    <p>Lorem ipsum dolor</p>
+    <p>Lorem ipsum dolor</p>
+    <p>Lorem ipsum dolor</p>
+    <p>Lorem ipsum dolor</p>
+
+    <script>
+      let elementosP = $("p");
+      $("#btn_pacote").click(() => {
+        if (elementosP.parent().is("div")) {
+          elementosP.unwrap();
+        } else {
+          elementosP.wrap("<div class='pacote'></div>");
+        }
+      });
+      $("#btn_empacotar_tudo").click(() => {
+        elementosP.wrapAll("<div class='pacote'></div>");
+      });
+      $("#btn_empacotar_depois").click(() => {
+        elementosP.wrapInner("<div class='pacote'></div>");
+      });
+    </script>
+  </body>
+</html>

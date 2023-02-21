@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      #bloco {
+        width: 200px;
+        height: 200px;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bloco"></div>
+    <p id="texto"></p>
+
+    <script>
+      // $("#bloco").on("click bdlclick", () => {
+      //   $("#texto").text("Click no quadrado");
+      // });
+      $("#bloco").on({
+        click: () => {
+          $("#texto").text("Click no quadrado");
+        },
+        mouseenter: () => {
+          $("#texto").text("Mouse entrou no quadrado");
+        },
+        mouseleave: () => {
+          $("#texto").text("Mouse saiu do quadrado");
+        },
+        dblclick: () => {
+          $("#texto").text("Double clique quadrado");
+        },
+      });
+    </script>
+  </body>
+</html>

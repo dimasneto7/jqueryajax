@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>primeira linha</li>
+        <li>segunda linha</li>
+        <li>terceira linha</li>
+      </ul>
+    </div>
+    <script>
+      // $("div").children().css({ border: "1px solid blue" });
+      // $("ul").children().css({ border: "1px solid purple" });
+      $("div").find("li:first").css({ border: "1px solid blue" });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      p {
+        background-color: #ffa;
+      }
+      h3 {
+        background-color: #afa;
+      }
+      .borda {
+        border: 2px solid #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="borda">primeiro</p>
+      <h3>segundo</h3>
+
+      <p>terceiro</p>
+      <h3>quarto</h3>
+
+      <p>quinto</p>
+      <h3>sexto</h3>
+
+      <p class="borda">sétimo</p>
+      <h3>oitavo</h3>
+
+      <p>nono</p>
+      <h3>décimo</h3>
+    </div>
+    <script>
+      $("p").filter(".borda").css({ color: "#f00" });
+      $("p").not(".borda").css({ color: "#00f" });
+    </script>
+  </body>
+</html>

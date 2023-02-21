@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .menu {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+      .btnMenu {
+        margin: 5px;
+        padding: 5px;
+        cursor: pointer;
+      }
+      #menus {
+        display: flex;
+        width: 100%;
+        background-color: #888;
+      }
+      #controle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #888;
+        padding: 5px;
+        border-radius: 0 0 10px 10px;
+        margin-left: 10px;
+        margin-right: auto;
+      }
+      #controle button {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu" class="menu">
+      <div id="menus">
+        <button class="btnMenu">home</button>
+        <button class="btnMenu">cursos</button>
+        <button class="btnMenu">material</button>
+        <button class="btnMenu">contatos</button>
+        <button class="btnMenu">sobre</button>
+      </div>
+      <div id="controle">
+        <button id="btnMenu">menu</button>
+        <p id="msg">menu exibido</p>
+      </div>
+    </div>
+    <script>
+      $("#btnMenu").click(function () {
+        $("#menus").slideToggle(1000, () => {
+          if ($("#menus").is(":visible")) {
+            $("#msg").text("menu exibido");
+          } else {
+            $("#msg").text("menu oculto");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
